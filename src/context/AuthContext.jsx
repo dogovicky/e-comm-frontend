@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
     if (token) {
       dispatch({
         type: "LOGIN",
-        payload: { user: user, token },
+        payload: { user, token },
       });
     }
   }, []);

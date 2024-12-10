@@ -32,7 +32,7 @@ const Login = () => {
         },
       });
 
-      console.log(response);
+      console.log(response.data);
       const { user, token } = response.data;
       console.log(token);
       login(user, token);
@@ -88,18 +88,3 @@ const Login = () => {
 };
 
 export default Login;
-
-// .then((response) => {
-//   dispatch({
-//     type: "LOGIN",
-//     payload: response.data,
-//   });
-//   const { token } = response.data;
-//   localStorage.setItem("jwtToken", token);
-//   console.log(token);
-//   alert("Login successful");
-//   navigate("/");
-// })
-// .catch((error) => {
-//   console.log(error.message);
-// });
